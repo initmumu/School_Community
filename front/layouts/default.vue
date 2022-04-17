@@ -51,11 +51,11 @@ export default {
 }
 
 .el-main {
-  width: 80%;
+  width: 70%;
   padding: 0;
   margin: 0;
   position: absolute;
-  left: 325px;
+  left: 400px;
   top: 100px;
   z-index: 0;
 }

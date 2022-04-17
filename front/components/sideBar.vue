@@ -6,45 +6,21 @@
       background-color="#0d326f"
       text-color="#ffffff"
       activate-text-color="#000000">
-      <el-submenu index="1">
+      <el-submenu v-for="data in sideBarData" :index="data.index" :key="data.title">
         <template slot="title">
-          <i class="el-icon-user"></i>
-          <span>회원관리</span>
+          <i :class="data.icon"></i>
+          <span>{{ data.title }}</span>
         </template>
-        <el-menu-item index="1-3">동아리원 조회</el-menu-item>
-      </el-submenu>
-      <el-submenu index="2">
-        <template slot="title">
-          <i class="el-icon-tickets"></i>
-          <span>커뮤니티</span>
-        </template>
-        <el-menu-item index="2-1">자유게시판</el-menu-item>
-        <el-menu-item index="2-2">정보공유 게시판</el-menu-item>
-        <el-menu-item index="2-3">취업정보 공유 게시판</el-menu-item>
-      </el-submenu>
-      <el-submenu index="3">
-        <template slot="title">
-          <i class="el-icon-edit"></i>
-          <span>스터디 관련</span>
-        </template>
-        <el-menu-item index="3-1">스터디 모집</el-menu-item>
-        <el-menu-item index="3-2">스터디 결과 보고</el-menu-item>
-      </el-submenu>
-      <el-submenu index="4">
-        <template slot="title">
-          <i class="el-icon-school"></i>
-          <span>프로젝트 관련</span>
-        </template>
-        <el-menu-item index="4-1">프로젝트 팀원 모집</el-menu-item>
-        <el-menu-item index="4-2">프로젝트 결과 모집</el-menu-item>
-      </el-submenu>
-      <el-submenu index="5">
-        <template slot="title">
-          <i class="el-icon-food"></i>
-          <span>선배 밥사주세요</span>
-        </template>
-        <el-menu-item index="5-1">밥 얻어먹을 후배 구합니다</el-menu-item>
-        <el-menu-item index="5-2">밥 사줄 선배 구합니다</el-menu-item>
+        <nuxt-link
+          v-for="item in data.items"
+          :key="item.title"
+          :to="item.link"
+          style="text-decoration: none;
+          color: inherit;">
+          <el-menu-item  :index="item.index" style="width: 325px">
+            {{ item.title }}
+          </el-menu-item>
+        </nuxt-link>
       </el-submenu>
     </el-menu>
     <img style="position: fixed; bottom: 0; width: 327px" src="~/static/kyungheeLogo.png"/>
@@ -54,7 +30,98 @@
 
 <script>
 export default {
-  name: 'sideBar'
+  name: 'sideBar',
+  data() {
+    return {
+      sideBarData: [
+        {
+          icon: "el-icon-user",
+          title: "회원관리",
+          index: "1",
+          items: [
+            {
+              index: "1-1",
+              title: "동아리원",
+              link: ""
+            }
+          ]
+        },
+        {
+          icon: "el-icon-tickets",
+          title: "커뮤니티",
+          index: "2",
+          items: [
+            {
+              index: "2-1",
+              title: "자유게시판",
+              link: "/comunity/freeBoard"
+            },
+            {
+              index: "2-2",
+              title: "정보 공유 게시판",
+              link: "/comunity/shareInformationBoard"
+            },
+            {
+              index: "2-3",
+              title: "취업 정보 공유 게시판",
+              link: "/comunity/shareJobInformationBoard"
+            }
+          ]
+        },
+        {
+          icon: "el-icon-edit",
+          title: "스터디 관련",
+          index: "3",
+          items: [
+            {
+              index: "3-1",
+              title: "스터디 팀원 모집",
+              link: "/study/recruitStudy"
+            },
+            {
+              index: "3-2",
+              title: "스터디 결과 보고",
+              link: "/study/studyResultReport"
+            }
+          ]
+        },
+        {
+          icon: "el-icon-school",
+          title: "프로젝트 관련",
+          index: "4",
+          items: [
+            {
+              index: "4-1",
+              title: "프로젝트 팀원 모집",
+              link: "/project/recruitProject"
+            },
+            {
+              index: "4-2",
+              title: "프로젝트 결과 보고",
+              link: "/project/projectResultReport"
+            }
+          ]
+        },
+        {
+          icon: "el-icon-school",
+          title: "선배님 밥사주세요",
+          index: "5",
+          items: [
+            {
+              index: "5-1",
+              title: "밥 얻어먹을 후배님 구함",
+              link: "/relation/recruitJuniorForMeal"
+            },
+            {
+              index: "5-2",
+              title: "밥 사줄 선배님 구함",
+              link: "/relation/recruitSeniorForMeal"
+            }
+          ]
+        },
+      ]
+    }
+  }
 }
 </script>
 
