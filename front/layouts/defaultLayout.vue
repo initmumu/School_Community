@@ -44,14 +44,14 @@ export default {
   z-index: 10;
   position: fixed;
   top: 100px;
-  width: 327px;
+  width: 325px;
   height: 100%;
   left: 0;
   margin: 0;
 }
 
 .el-main {
-  max-width: 100%;
+  width: 80%;
   padding: 0;
   margin: 0;
   position: absolute;
