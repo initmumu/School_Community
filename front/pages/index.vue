@@ -1,9 +1,13 @@
 <template>
-  <Tutorial />
+  <div>
+    <Tutorial />
+  </div>
+
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  layout: 'defaultLayout'
 }
 </script>
