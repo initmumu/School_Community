@@ -1,7 +1,7 @@
 <template>
   <div>
     <title-component v-bind:title="title"/>
-    <nomal-board/>
+    <nomal-board v-bind:path="path"/>
   </div>
 </template>
 
@@ -10,7 +10,8 @@ export default {
   name: "freeboard",
   data () {
     return {
-      title: "자유 게시판"
+      title: "자유 게시판",
+      path: "/community/freeboard/"
     }
   }
 }

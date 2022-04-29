@@ -1,6 +1,8 @@
 <template>
   <div style="height: 100px; width: 100%; background-color: #0d326f; margin: 0px">
-    <img style="height: 100px; display: inline" src="~/static/tgwingLogo.png" />
+    <nuxt-link to="/">
+      <img style="height: 100px; display: inline" src="~/static/tgwingLogo.png" />
+    </nuxt-link>
     <div style="height: 100px; display: inline; float: right;">
       <el-button style="width: 50px; height: 50px;  margin: 25px" icon="el-icon-user" circle></el-button>
     </div>

@@ -54,17 +54,17 @@ export default {
             {
               index: "2-1",
               title: "자유게시판",
-              link: "/comunity/freeBoard"
+              link: "/community/freeBoard"
             },
             {
               index: "2-2",
               title: "정보 공유 게시판",
-              link: "/comunity/shareInformationBoard"
+              link: "/community/shareInformationBoard"
             },
             {
               index: "2-3",
               title: "취업 정보 공유 게시판",
-              link: "/comunity/shareJobInformationBoard"
+              link: "/community/shareJobInformationBoard"
             }
           ]
         },
