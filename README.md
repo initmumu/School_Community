@@ -7,6 +7,7 @@ Mobile - Android, Server-Spring with java
 * 김대선(경희대학교 컴퓨터공학과 17학번)
 
 ## Android
+* 송수민(경희대학교 컴퓨터공학과 22학번)
 * 배승호(경희대학교 컴퓨터공학과 17학번)
 
 ## Server(Kopring)
